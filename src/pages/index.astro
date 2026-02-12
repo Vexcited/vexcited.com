@@ -1,11 +1,35 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import DuoToneMe from "../assets/landing/duotone.png";
+import Grain from "../assets/grain.png";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="relative h-screen overflow-x-hidden">
+    <div
+      class="pointer-events-none fixed inset-0 z-10 bg-cover mix-blend-color-dodge"
+      style={`background-image: url(${Grain.src})`}
+    >
+    </div>
+
+    <p
+      class="z-0 absolute bottom-0 leading-12vw font-[Array] font-700 text-17.55vw text-#C6A0F6"
+    >
+      vexcited
+    </p>
+
+    <div
+      class="mx-auto absolute flex -left-10vh items-center inset-0 w-fit pointer-events-none select-none z-10"
+    >
+      <img class="h-full object-cover z-4" src={DuoToneMe.src} />
+      <img
+        class="h-full -left-6vh absolute opacity-10 object-cover z-2"
+        src={DuoToneMe.src}
+      />
+      <img
+        class="h-full left-3vh absolute opacity-5 object-cover z-0"
+        src={DuoToneMe.src}
+      />
+    </div>
+  </div>
 </Layout>
