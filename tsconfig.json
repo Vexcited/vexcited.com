@@ -5,6 +5,6 @@
       "unplugin-icons/types/astro"
     ]
   },
-  "include": [".astro/types.d.ts", "**/*"],
+  "include": [".astro/types.d.ts", "uno.config.ts", "**/*"],
   "exclude": ["dist"]
 }
