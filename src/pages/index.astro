@@ -2,21 +2,40 @@
 import Layout from "../layouts/Layout.astro";
 import DuoToneMe from "../assets/landing/duotone.png";
 import Grain from "../assets/grain.png";
+import Cross from "../assets/landing/cross.svg";
+import Circle from "../assets/landing/circle.svg";
 ---
 
 <Layout>
-  <div class="relative h-screen overflow-x-hidden">
+  <div class="relative h-screen overflow-hidden">
     <div
-      class="pointer-events-none fixed inset-0 z-10 bg-cover mix-blend-color-dodge"
+      class="pointer-events-none fixed inset-0 z-50 bg-cover mix-blend-color-dodge"
       style={`background-image: url(${Grain.src})`}
     >
     </div>
 
-    <p
-      class="z-0 absolute bottom-0 leading-12vw font-[Array] font-700 text-17.55vw text-#C6A0F6"
+    <img
+      src={Cross.src}
+      class="z-10 absolute top-10vh left-8vh pointer-events-none"
+    />
+    <img
+      src={Circle.src}
+      class="z-10 absolute top-44vh right-5vh pointer-events-none"
+    />
+
+    <div
+      class="z-4 absolute top-4vh h-74vh inset-x-4vh border-2 border-#C6A0F6 border-dashed rd-14px"
     >
-      vexcited
-    </p>
+    </div>
+    <div
+      class="z-3 absolute top-6vh left-2vh h-74vh right-6vh border-2 border-#C6A0F6/50 border-dashed rd-14px"
+    >
+    </div>
+
+    <div class="leading-12vw font-[Array] font-700 text-17.55vw text-#C6A0F6">
+      <p class="absolute bottom-0 blur-2xl z-2">vexcited</p>
+      <p class="absolute bottom-0 z-0 mix-blend-plus-lighter">vexcited</p>
+    </div>
 
     <div
       class="mx-auto absolute flex -left-10vh items-center inset-0 w-fit pointer-events-none select-none z-10"
