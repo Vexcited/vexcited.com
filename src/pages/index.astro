@@ -4,6 +4,10 @@ import DuoToneMe from "../assets/landing/duotone.png";
 import Grain from "../assets/grain.png";
 import Cross from "../assets/landing/cross.svg";
 import Circle from "../assets/landing/circle.svg";
+import LucideGithub from "~icons/lucide/github";
+import LucideInstagram from "~icons/lucide/instagram";
+import LucideTwitch from "~icons/lucide/twitch";
+import LucideYoutube from "~icons/lucide/youtube";
 ---
 
 <Layout>
@@ -12,6 +16,40 @@ import Circle from "../assets/landing/circle.svg";
       class="pointer-events-none fixed inset-0 z-50 bg-cover mix-blend-color-dodge"
       style={`background-image: url(${Grain.src})`}
     >
+    </div>
+
+    <div
+      class="absolute top-13vh right-26vh z-20 rd-10px bg-#1E2030 p-32px rotate-4"
+    >
+      <div
+        class="z-4 absolute inset-0 m-4% border-2 border-#C6A0F6 border-dashed rd-10px pointer-events-none"
+      >
+      </div>
+
+      <h1 class="font-900 leading-125% tracking-wider text-#CAD3F5">
+        Mikkel ALMONTE--RINGAUD
+      </h1>
+      <p class="font-[Geist_Mono] tracking-wide text-#6E738D">@vexcited</p>
+
+      <div class="flex gap-12px text-20px text-#C6A0F6 mt-16px">
+        <a target="_blank" href="https://github.com/Vexcited"
+          ><LucideGithub /></a
+        >
+        <a target="_blank" href="https://instagram.com/vexcitedoff"
+          ><LucideInstagram /></a
+        >
+        <a target="_blank" href="https://twitch.tv/vexcited"><LucideTwitch /></a
+        >
+        <a target="_blank" href="https://youtube.com/@Vexcited"
+          ><LucideYoutube /></a
+        >
+      </div>
+
+      <img
+        src="/favicon.svg"
+        alt="Vexcited's Logo"
+        class="z-5 absolute -bottom-34px -right-16px size-100px"
+      />
     </div>
 
     <img
