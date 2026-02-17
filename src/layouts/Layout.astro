@@ -3,6 +3,11 @@ import "@fontsource/geist/400";
 import "@fontsource/geist/900";
 import "@fontsource/geist-mono";
 import "../assets/fonts/array/index.css"; // Array
+
+interface Props {
+  description: string;
+  title: string;
+}
 ---
 
 <!doctype html>
@@ -14,27 +19,22 @@ import "../assets/fonts/array/index.css"; // Array
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
 
-    <title>Mikkel ALMONTE--RINGAUD</title>
-    <meta name="title" content="Mikkel ALMONTE--RINGAUD" />
-    <meta name="description" content="Mikkel ALMONTE--RINGAUD's Portfolio" />
+    <title>{Astro.props.title}</title>
+    <meta name="title" content={Astro.props.title} />
+    <meta name="description" content={Astro.props.description} />
     <link rel="canonical" href="https://www.vexcited.com/" />
 
+    <meta property="og:site_name" content="Vexcited" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.vexcited.com/" />
-    <meta property="og:title" content="Mikkel ALMONTE--RINGAUD" />
-    <meta
-      property="og:description"
-      content="Mikkel ALMONTE--RINGAUD's Portfolio"
-    />
+    <meta property="og:title" content={Astro.props.title} />
+    <meta property="og:description" content={Astro.props.description} />
     <meta property="og:image" content="/og.png" />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://www.vexcited.com/" />
-    <meta property="twitter:title" content="Mikkel ALMONTE--RINGAUD" />
-    <meta
-      property="twitter:description"
-      content="Mikkel ALMONTE--RINGAUD's Portfolio"
-    />
+    <meta property="twitter:title" content={Astro.props.title} />
+    <meta property="twitter:description" content={Astro.props.description} />
     <meta property="twitter:image" content="/og.png" />
 
     <meta name="generator" content={Astro.generator} />
