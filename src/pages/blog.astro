@@ -1,9 +1,66 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Grain from "../assets/grain.png";
+import InternalRadicle from "~icons/internal/radicle";
+import LucideInstagram from "~icons/lucide/instagram";
+import LucideTwitch from "~icons/lucide/twitch";
+import LucideYoutube from "~icons/lucide/youtube";
 ---
 
 <Layout
   title="Blog - Mikkel ALMONTE--RINGAUD"
-  description="This is where I
-write, sometimes it may be useful."
-/>
+  description="This is where I write, sometimes it may be useful."
+>
+  <header
+    class="relative max-w-742px mx-auto flex justify-between items-center w-full h-32px my-30px"
+  >
+    <a href="/">
+      <img src="/favicon.svg" alt="Vexcited's Logo" class="size-32px" />
+    </a>
+
+    <nav
+      class="absolute inset-0 gap-16px flex justify-center font-[Geist_Mono] leading-32px text-#ccc pointer-events-none [&>*]:pointer-events-auto"
+    >
+      <a class="" href="/garden">garden</a>
+      <a class="font-600 text-#C6A0F6" href="/blog">blog</a>
+      <a class="" href="/ctfs">ctfs</a>
+    </nav>
+
+    <div class="flex gap-12px text-white/50">
+      <a target="_blank" href="https://code.vexcited.com/"
+        ><InternalRadicle /></a
+      >
+      <a target="_blank" href="https://instagram.com/vexcitedoff"
+        ><LucideInstagram /></a
+      >
+      <a target="_blank" href="https://twitch.tv/vexcited"><LucideTwitch /></a>
+      <a target="_blank" href="https://youtube.com/@Vexcited"
+        ><LucideYoutube /></a
+      >
+    </div>
+  </header>
+  <div
+    class="border-y relative border-white/10 h-116px w-full overflow-hidden flex items-center justify-center"
+  >
+    <h1 class="font-300 text-#eee/75 text-24px z-20">
+      this is where <strong class="font-600 text-white">i write</strong>
+    </h1>
+
+    <div
+      class="pointer-events-none absolute inset-0 z-10 bg-repeat mix-blend-color-dodge"
+      style={`background-image: url(${Grain.src})`}
+    >
+    </div>
+
+    <p
+      class="select-none pointer-events-none absolute text-center inset-0 font-900 bg-gradient-to-b opacity-10 text-172px leading-67% text-transparent bg-clip-text from-#C6A0F6 -from-5% to-110% to-transparent"
+    >
+      BLOG
+    </p>
+
+    <div
+      class="absolute inset-x-0 -top-200px opacity-20 -bottom-40px bg-radial from-#C6A0F6 to-transparent"
+    >
+    </div>
+  </div>
+</Layout>
